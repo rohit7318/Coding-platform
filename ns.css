@@ -1,0 +1,273 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+.myContainer
+{
+    width: calc(100vw - 100px);
+    margin: 0 auto;
+    
+}
+
+.navbar
+{
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border-bottom: 2px solid black; */
+
+}
+
+.navbar button
+{
+    padding: 1vh 1vw;
+    background-color: #FF8578;
+    border: none;
+    color: white;
+    border-radius: 1vw;
+}
+
+.navbar button:hover
+{
+    background-color: white;
+    border: 2px solid #FF8578;
+    color: black;
+}
+
+
+
+.navRight a 
+{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: black;
+}
+
+.navRight a:hover
+{
+    color: #FF8578;
+}
+
+
+.navRight
+{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+
+}
+
+.main
+{
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    width: 100%;
+    /* height: 100; */
+    justify-content: start;
+    overflow: hidden;
+    
+}
+
+.left
+{
+    /* width: 55%; */
+    height: 100vh;
+    padding-top: 1em;
+    /* background-color: red; */
+}
+
+.left h1
+{
+    font-size: 3rem;
+    line-height: 1;
+    width: 90%;
+    font-weight: 700;
+    
+}
+
+.left h1 span
+{
+    color: #FF8578;
+}
+
+.left button 
+{
+    background-color: #FF8578;
+    padding: 2vh 2vw;
+    color: white;
+    border: none;
+    border-radius: 2vw;
+}
+
+
+.left p 
+{
+    font-size: 1.2rem;
+    line-height:1.4;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.right
+{
+    /* width: 45%; */
+    height: 100vh;
+    
+    background-color: yellowgreen;
+}
+
+.right img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+
+
+@media (max-width:600px) 
+{
+
+    /* Hiding a tags and sign in button */
+    .navRight a
+    {
+        display: none;
+    }
+    .navRight button 
+    {
+        display: none;
+    }
+
+    .main
+    {
+        grid-template-columns: 1fr;
+        row-gap: 10vh;
+        
+    }
+
+    .left
+    {
+        width: 100%;
+        height: 50%;
+    }
+
+    .left h1 
+    {
+        font-size: 2.5rem;
+    }
+    .left p 
+    {
+        font-size: 1rem;
+    }
+    .right
+    {
+        width: 100%;
+        
+    }
+
+    .right img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+
+
+
+/* Tablets */
+@media (min-width:601px) and (max-width:810px) 
+{
+
+ .navbar
+ {
+     display: grid;
+     grid-template-columns:1fr 5fr;
+     
+ }
+
+ .navbar h2 
+ {
+     font-size: 1rem;
+ }
+
+ .navbar button 
+ {
+     font-size: x-small;
+     padding: 1vh 1vw;
+     
+ }
+
+
+
+ .navRight
+ {
+    
+     justify-content: space-evenly;
+ }
+     .navRight a 
+     {
+             font-size: 0.7rem;
+             /* flex-shrink: 1; */
+     }
+
+
+.navRight i 
+{
+ display: none;
+}
+
+
+.main
+{
+ width: 100%;
+ height: 100%;
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: 1fr 1fr;
+ row-gap: 10vh;
+}
+
+.left
+{
+ width: 100%;
+ height: 50%;
+}
+.right
+{
+ /* margin-top: 30px; */
+ width: auto;
+ height: 45%;
+}
+
+.right img
+{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+
+}
+
+
+
+/* Desktops */
+@media (min-width:811px)  
+{
+ .navRight i 
+ {
+     display: none;
+ }
+}
+
